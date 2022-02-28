@@ -12,8 +12,8 @@ jobs:
           root_file: resume/resume.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
-        extra_fonts: |
-          ./fonts/*.otf
+          extra_fonts: |
+            ./fonts/*.otf
       
       - name: resume for web dev
         uses: dante-ev/latex-action@latest
