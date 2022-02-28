@@ -26,9 +26,10 @@ jobs:
       - name: Gather build artifacts
         run: |
           mkdir build
-          mv *.pdf build/
-          mv *.png build/
-          cp -r README.md .github/_config.yml build/
+          ls
+          mv resume/*.pdf build/
+          mv resume/*.png build/
+          cp -r README.md build/
       - name: Publish to GitHub pages
         if: success() && github.ref == 'refs/heads/main'
         uses: crazy-max/ghaction-github-pages@v1
