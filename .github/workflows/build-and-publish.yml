@@ -32,7 +32,7 @@ jobs:
           mv resume/*.png build/
           cp -r README.md build/
       - name: Publish to GitHub pages
-        if: github.ref == 'refs/heads/main'
+        # if: github.ref == 'refs/heads/main'
         uses: crazy-max/ghaction-github-pages@v1
         with:
           target_branch: gh-pages
