@@ -9,16 +9,19 @@ jobs:
       - name: Compile LaTeX document
         uses: dante-ev/latex-action@latest
         with:
-          root_file: resume/resume.tex
+          root_file: resume.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
+          working_directory: resume/
+          work_in_root_file_dir: true
           extra_fonts: |
             ./fonts/*.otf
       
       - name: resume for web dev
         uses: dante-ev/latex-action@latest
         with:
-          root_file: resume/resume-front-end.tex
+          root_file: resume-front-end.tex
+          working_directory: resume/
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
       
