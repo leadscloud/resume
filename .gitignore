@@ -12,3 +12,4 @@
 resume.pdf
 deploy_key
 .DS_Store
+resume/*.sty

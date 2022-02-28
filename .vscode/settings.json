@@ -1,0 +1,47 @@
+{
+  "latex-workshop.latex.recipe.default": "lastUsed",
+  "latex-workshop.latex.recipes": [
+    {
+        "name": "latexmk 🔃",
+        "tools": [
+            "latexmk"
+        ]
+    },
+    {
+        "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+        "tools": [
+            "pdflatex",
+            "bibtex",
+            "pdflatex",
+            "pdflatex"
+        ]
+    },
+    // let us suppose the first two recipes are Latexmk vanilla and 
+    // pdflatex twice for bibtex
+    {
+        "name": "latexmk (xelatex)",
+        "tools": [
+            "xelatex"
+        ]
+    },
+  ],
+  "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ]
+}

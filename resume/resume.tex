@@ -1,4 +1,7 @@
-\documentclass[letterpaper,11pt,nofonts]{ctexart}
+% !TeX program = xelatex
+% !TEX root = ./resume.tex
+
+\documentclass[letterpaper,11pt,fontset=none]{ctexart}
 \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 % \setCJKmainfont[ItalicFont={Adobe Heiti Std}]{Adobe Heiti Std} %设置中文默认字体
 % \setCJKsansfont{Adobe Heiti Std} %设置文泉驿正黑字体作为中文无衬线字体
@@ -10,6 +13,7 @@
 % \usepackage{subfigure}
 \usepackage{caption}
 \usepackage{subcaption}
+% \usepackage[7pt]{\tiny}
 \pagestyle{fancy}
 
 \begin{document}
@@ -21,6 +25,8 @@
 \sffamily 最后更新: \today                        & \href{mailto:love4026@gmail.com}{love4026@gmail.com}
 \end{tabular*}
 \input{../components/skills}
+\newpage
+% \clearpage
 \input{../components/work}
 \input{../components/education}
 \section{\textbf{链接}}
