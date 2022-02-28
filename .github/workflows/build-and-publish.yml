@@ -10,14 +10,16 @@ jobs:
         uses: dante-ev/latex-action@latest
         with:
           root_file: resume/resume.tex
-          compiler: xelatex
-          args: -xelatex -file-line-error -interaction=nonstopmode -shell-escape
+          compiler: pdflatex
+          args: -interaction=nonstopmode -shell-escape
+        extra_fonts: |
+          ./fonts/*.otf
       
       - name: resume for web dev
         uses: dante-ev/latex-action@latest
         with:
           root_file: resume/resume-front-end.tex
-          compiler: xelatex
+          compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
       
       - name: Gather build artifacts
