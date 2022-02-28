@@ -25,13 +25,14 @@ jobs:
       
       - name: Gather build artifacts
         run: |
-          mkdir build
           ls
+          ls resume/*
+          mkdir build
           mv resume/*.pdf build/
           mv resume/*.png build/
           cp -r README.md build/
       - name: Publish to GitHub pages
-        if: success() && github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         uses: crazy-max/ghaction-github-pages@v1
         with:
           target_branch: gh-pages
