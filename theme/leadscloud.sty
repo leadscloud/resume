@@ -30,7 +30,23 @@ pdfkeywords={Resume, 简历, 张雷的简历, sbmzhcn, leadscloud},
 
 \pagestyle{fancy}
 \fancyhead{}
-\fancyfoot[C]{\vspace*{1\baselineskip} Page \thepage\ of \pageref{LastPage}}
+
+\newcommand{\changefont}{%
+  \fontsize{9}{11}\selectfont
+}
+
+% \setlength{\hoffset}{0.46cm}
+% \setlength{\voffset}{-0.04cm}
+% \setlength{\topmargin}{0pt}
+% \setlength{\headsep}{-10pt}
+% \setlength{\headheight}{0pt}
+
+\fancyhf{}
+\fancyhead[R]{\textbf{- \thepage/\pageref*{LastPage} -}} % chapter
+% \rhead{\textsc{Tutorial\\The periodic table}}
+% \fancyhead[L]{\thepage}
+
+\fancyfoot[C]{\vspace*{1\baselineskip} \changefont Page \thepage\ of \pageref{LastPage}}
 % \cfoot{Page \thepage\ of \pageref{LastPage}}
 
 % \fancyhf{} % clear all header and footer fields
@@ -42,7 +58,10 @@ pdfkeywords={Resume, 简历, 张雷的简历, sbmzhcn, leadscloud},
 \addtolength{\oddsidemargin}{-0.375in}
 \addtolength{\evensidemargin}{-0.375in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
+\addtolength{\headwidth}{1in}
+% \addtolength{\topmargin}{-.5in}
+\addtolength{\topmargin}{-.85in}
+\addtolength{\headsep}{25pt}
 \addtolength{\textheight}{1.0in}
 \urlstyle{same}
 \raggedbottom
